@@ -1,31 +1,16 @@
 
 public class rombo extends Figura2D{
+    private float angle;
 
+    public rombo(float side, String color, float angle) {
+        super(side, color);
+        this.angle = angle;
+    }
 
-private int  diagonalmay, diagonalmen;
+    public float getAngle() {return angle;}
+    public void setAngle(float angle) {this.angle = angle;}
 
-public rombo(int diagonalmay, int diagonalmen) {
-    this.diagonalmay = diagonalmay;
-    this.diagonalmen = diagonalmen;
-}
-
-public float getDiagonalmay() {
-    return diagonalmay;
-}
-
-public void setDiagonalmay(int diagonalmay) {
-    this.diagonalmay = diagonalmay;
-}
-
-public float getDiagonalmen() {
-    return diagonalmen;
-}
-
-public void setDiagonalmen(int diagonalmen) {
-    this.diagonalmen = diagonalmen;
-}
-
-
-
+    @Override
+    public Float area() { return (float) (this.getSide() * this.getSide() * Math.sin(this.getAngle())); }
 
 }

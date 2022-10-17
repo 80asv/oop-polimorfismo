@@ -1,30 +1,14 @@
 
-public class cono {
+public class cono extends Figuras3D{
+    private float height;
+
+    public cono(String color, float baseRadius, float height) {
+        super(color, baseRadius);
+        this.height = height;
+    }
+
+    public float getHeight() {return height;}
+    public void setHeight(float height) {this.height = height;}
     
-    
-    private int alturacono,radiocuadradocono;
-
-    public cono(int alturacono, int radiocuadradocono) {
-        this.alturacono = alturacono;
-        this.radiocuadradocono = radiocuadradocono;
-    }
-
-    public int getAlturacono() {
-        return alturacono;
-    }
-
-    public void setAlturacono(int alturacono) {
-        this.alturacono = alturacono;
-    }
-
-    public int getRadiocuadradocono() {
-        return radiocuadradocono;
-    }
-
-    public void setRadiocuadradocono(int radiocuadradocono) {
-        this.radiocuadradocono = radiocuadradocono;
-    }
-
-    
-    
+    public Float volumen(){ return (float) ((1d / 3d) * Math.PI * Math.pow(this.getSide(), 2) * this.getHeight()); }
 }

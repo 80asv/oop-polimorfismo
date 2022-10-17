@@ -1,30 +1,15 @@
 
 public class pentagono extends Figura2D {
-    
-    private float apotema,perimetro;
+    private float apothem;
 
-    public pentagono(float apotema, float perimetro) {
-        this.apotema = apotema;
-        this.perimetro = perimetro;
+    public pentagono(float side, String color, float apothem) {
+        super(side, color);
+        this.apothem = apothem;
     }
 
-    public float getApotema() {
-        return apotema;
-    }
+    public Float getApothem() {return apothem;}
+    public void setApothem(Float apothem) {this.apothem = apothem;}
 
-    public void setApotema(float apotema) {
-        this.apotema = apotema;
-    }
-
-    public float getPerimetro() {
-        return perimetro;
-    }
-
-    public void setPerimetro(float perimetro) {
-        this.perimetro = perimetro;
-    }
-    
-    
-    
-    
+    @Override
+    public Float area(){ return this.getSide() * 5 * this.getApothem() * (0.5f);}
 }

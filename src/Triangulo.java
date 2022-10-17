@@ -1,28 +1,21 @@
 
 public  class Triangulo extends Figura2D {
     
-    private float altura;
-    private float base;
+    private float height;
 
-    public Triangulo(float altura, float base) {
-    
-        this.altura = altura;
-        this.base = base;
+    public Triangulo(float base, String color, float height) {
+        super(base, color);
+        this.height = height;
     }
 
-    public float getAltura() {
-        return altura;
+    public float getHeight() {
+        return height;
     }
 
-    public void setAltura(float altura) {
-        this.altura = altura;
+    public void setHeight(float height) {
+        this.height = height;
     }
 
-    public float getBase() {
-        return base;
-    }
-
-    public void setBase(float base) {
-        this.base = base;
-    }
+    @Override
+    public Float area() { return this.getSide() * this.getHeight() * (0.5f); }
 }

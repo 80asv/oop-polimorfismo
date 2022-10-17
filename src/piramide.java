@@ -1,31 +1,20 @@
 
-public class piramide {
-    
-    private int areapiramide,alturapiramide;
+public class piramide extends Figuras3D{
+    private float height;
 
-    public piramide(int areapiramide, int alturapiramide) {
-        this.areapiramide = areapiramide;
-        this.alturapiramide = alturapiramide;
+    public piramide(String color, float baseSide, float height) {
+        super(color, baseSide);
+        this.height = height;
     }
 
-    public int getAreapiramide() {
-        return areapiramide;
+    public float getHeight() {
+        return height;
     }
 
-    public void setAreapiramide(int areapiramide) {
-        this.areapiramide = areapiramide;
+    public void setHeight(float height) {
+        this.height = height;
     }
 
-    public int getAlturapiramide() {
-        return alturapiramide;
-    }
-
-    public void setAlturapiramide(int alturapiramide) {
-        this.alturapiramide = alturapiramide;
-    }
-
-    
-    
-    
+    public Float volumen(){return (float) ((1d / 3d) * (Math.pow(this.getSide(), 2)) * this.getHeight());}
     
 }

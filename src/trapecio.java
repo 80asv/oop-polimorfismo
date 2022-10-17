@@ -1,38 +1,30 @@
 
 
 public class trapecio extends Figura2D {
-    
-   private int ladomay,ladomen,altu; 
+    private float minorBasis, majorBasis;
 
-    public trapecio(int ladomay, int ladomen, int altu) {
-        this.ladomay = ladomay;
-        this.ladomen = ladomen;
-        this.altu = altu;
+    public trapecio(float height, String color, float minorBasis, float majorBasis) {
+        super(height, color);
+        this.minorBasis = minorBasis;
+        this.majorBasis = majorBasis;
     }
 
-    public int getLadomay() {
-        return ladomay;
+    public Float getMinorBasis() {
+        return minorBasis;
     }
 
-    public void setLadomay(int ladomay) {
-        this.ladomay = ladomay;
+    public void setMinorBasis(Float minorBasis) {
+        this.minorBasis = minorBasis;
     }
 
-    public int getLadomen() {
-        return ladomen;
+    public Float getMajorBasis() {
+        return majorBasis;
     }
 
-    public void setLadomen(int ladomen) {
-        this.ladomen = ladomen;
-    }
-
-    public int getAltu() {
-        return altu;
-    }
-
-    public void setAltu(int altu) {
-        this.altu = altu;
+    public void setMajorBasis(Float majorBasis) {
+        this.majorBasis = majorBasis;
     }
     
-    
+    @Override
+    public Float area() { return (float) (((this.getSide() + this.getMinorBasis()) / 2d) * this.getSide()); }
 }

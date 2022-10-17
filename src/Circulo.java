@@ -1,20 +1,8 @@
-
-
 public class Circulo extends Figura2D{
-    private float radio;
-
-    
-
-    public Circulo(float radio) {
-        this.radio = radio;
+    public Circulo(float radio, String color) {
+        super(radio, color);
     }
 
-    public float getRadio() {
-        return radio;
-    }
-
-    public void setRadio(float radio) {
-        this.radio = radio;
-    }
-
+    @Override
+    public Float area() {return (this.getSide() * this.getSide() * 3.1416f);}
 }

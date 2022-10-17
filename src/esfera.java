@@ -1,19 +1,9 @@
 
-public class esfera {
-    
-    private int radioesfera;
+public class esfera extends Figuras3D{
 
-    public esfera(int radioesfera) {
-        this.radioesfera = radioesfera;
+    public esfera(String color, float radius) {
+        super(color, radius);
     }
-    public int getRadioesfera() {
-        return radioesfera;
-    }
-
-    public void setRadioesfera(int radioesfera) {
-        this.radioesfera = radioesfera;
-    }
-    
-    
-
+    @Override
+    public Float volumen(){return (float) ((4d / 3d) * Math.PI * Math.pow(this.getSide(), 2)); }
 }

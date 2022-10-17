@@ -1,27 +1,16 @@
 
-public class cilindro {
+public class cilindro extends Figuras3D{ // ni si quiera estaba extendiendo de Figura3D
     
-    private int alturacilindro,radioalcuadrado;
+    private float height;
 
-    public cilindro(int alturacilindro, int radioalcuadrado) {
-        this.alturacilindro = alturacilindro;
-        this.radioalcuadrado = radioalcuadrado;
+    public cilindro(String color, float base, float height) {
+        super(color, base);
+        this.height = height;
     }
 
-    public int getAlturacilindro() {
-        return alturacilindro;
+    public float getHeight() {
+        return height;
     }
 
-    public void setAlturacilindro(int alturacilindro) {
-        this.alturacilindro = alturacilindro;
-    }
-
-    public int getRadioalcuadrado() {
-        return radioalcuadrado;
-    }
-
-    public void setRadioalcuadrado(int radioalcuadrado) {
-        this.radioalcuadrado = radioalcuadrado;
-    }
-    
+    public Float volumen(){ return (float) (Math.PI * Math.pow(this.getSide(), 2) * this.getHeight());}
 }
